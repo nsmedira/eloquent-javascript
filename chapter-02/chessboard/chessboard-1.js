@@ -1,21 +1,20 @@
-let string = ''
-let length = 8
-for ( let row = 0 ; row < length ; row++ ) {
+let string = "";
 
-    for ( let col = 0 ; col < length ; col++ ) {
+// make a board of any size with the length binding
+let length = 16;
 
-        if ( !( (row + col) % 2 ) ) {
-            string += ' '
-        } else {
-            string += '#'
-        }
-
+for (let row = 0; row < length; row++) {
+  for (let col = 0; col < length; col++) {
+    if (!((row + col) % 2)) {
+      string += " ";
+    } else {
+      string += "#";
     }
+  }
 
-    if (row !== length - 1) {
-        string += '\n'
-    }
-
+  if (row !== length - 1) {
+    string += "\n";
+  }
 }
 
-console.log(string)
+console.log(string);
